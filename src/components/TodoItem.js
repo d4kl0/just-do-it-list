@@ -1,22 +1,25 @@
 import React, { Component } from 'react'
 
 export class TodoItem extends Component {
+    itemStyle = (i) => {
+        return {
+            backgroundColor: "#fff9e8",
+            borderBottom: "darkgray dotted 1px",
+            padding: "8px",
+            textDecoration: i ? "line-through" : "none"
+        }
+    }
+
     render() {
-    const items = this.props.todos.map(i => <li>{i.title}</li>);
+    const items = this.props.todos.map(i => <li style={this.itemStyle(i.isChecked)} key={i.id}><input type="checkbox"  />{" "}{i.title}</li>);
         return (
-            <div style={itemStyle}>
+            <div>
                 <ul>
                     {items}
                 </ul>
             </div>
         )
     }
-}
-
-const itemStyle = {
-    backgroundColor: "#fff9e8",
-    borderBottom: "darkgray dotted 1px",
-    padding: "8px"
 }
 
 export default TodoItem

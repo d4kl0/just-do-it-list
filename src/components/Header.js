@@ -4,8 +4,7 @@ export class Header extends Component {
     render() {
         return (
             <div id="header" style={headerStyle}>
-                <h1 id=
-                 "header-title">Just Do It List</h1>
+                <h1 id="header-title">Just Do It List</h1>
                 <a id="home-link" href="#0">Home</a> | <a id="about-link" href="#0">About</a>
             </div>
         )

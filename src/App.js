@@ -33,7 +33,7 @@ constructor(props) {
     return (
       <div className="App">
       <Header />
-      <TodoItem todos={this.state.todos}/>
+      <TodoItem todos={this.state.todos} />
       <AddTodo />
     </div>
     )
