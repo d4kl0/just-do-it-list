@@ -2,9 +2,12 @@ import React, { Component } from 'react'
 
 export class TodoItem extends Component {
     render() {
+    const items = this.props.todos.map(i => <li>{i.title}</li>);
         return (
             <div style={itemStyle}>
-                <p><input type="checkbox"/>{" "}{this.props.todos.title}</p>
+                <ul>
+                    {items}
+                </ul>
             </div>
         )
     }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import Header from "./components/Header.js"
-import TodoContainer from "./components/TodoContainer.js"
+import TodoItem from "./components/TodoItem.js"
 import AddTodo from "./components/AddTodo.js"
 
 
@@ -33,7 +33,7 @@ constructor(props) {
     return (
       <div className="App">
       <Header />
-      <TodoContainer todos={this.state.todos}/>
+      <TodoItem todos={this.state.todos}/>
       <AddTodo />
     </div>
     )
