@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import Header from "./components/Header.js"
-import TodoItem from "./components/TodoItem.js"
+import TodoContainer from "./components/TodoContainer.js"
 import AddTodo from "./components/AddTodo.js"
 
 
@@ -29,15 +29,28 @@ constructor(props) {
   };
 }
 
+/*
+Should search for help on this one!
+
+onChangeHandler = (event) => {
+  if (this.state.todos.isChecked === true) {
+   return this.setState({todos: isChecked = false})
+  } else (this.state.todos.isChecked === false) ()
+  return this.setState({todos: isChecked = true})
+  }
+  }
+*/
+
+//We send the states as props to the TodoContainer
   render() {
     return (
       <div className="App">
       <Header />
-      <TodoItem todos={this.state.todos} />
+      <TodoContainer todos={this.state.todos} /*onChangeHandler={this.onChangeHandler}*/ />
       <AddTodo />
     </div>
     )
   }
-}
 
+}
 export default App;

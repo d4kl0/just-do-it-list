@@ -1,25 +1,22 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
 export class TodoItem extends Component {
-    itemStyle = (i) => {
-        return {
-            backgroundColor: "#fff9e8",
-            borderBottom: "darkgray dotted 1px",
-            padding: "8px",
-            textDecoration: i ? "line-through" : "none"
-        }
-    }
 
+
+
+//prop.todos recieved from TodoContainer as array
     render() {
-    const items = this.props.todos.map(i => <li style={this.itemStyle(i.isChecked)} key={i.id}><input type="checkbox"  />{" "}{i.title}</li>);
         return (
             <div>
-                <ul>
-                    {items}
-                </ul>
+              <p>{this.props.todos}</p>
             </div>
         )
     }
 }
 
 export default TodoItem
+
+TodoItem.propTypes = {
+    todos: PropTypes.array
+}
